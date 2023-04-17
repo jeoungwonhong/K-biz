@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>참 괜찮은 중소기업</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
@@ -117,12 +117,12 @@
     <div class="main-s">
         <div class="container">
             <div class="row">
-                <div class="main-sbox">
+                <form class="main-sbox" id="searchForm">
                     <input type="text" class="place-c" placeholder="기업명, 지역, 업종을 검색해주세요.">
                     <span class="search-c"><a href="#">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </a></span>
-                </div>
+                </form>
                 <a href="javascript:void(0)">
                     <div class="main-sbtn">
                         <p>
@@ -139,6 +139,7 @@
 
     <!-- MAIN CONTENT -->
     <div class="main-c">
+        <!-- REALTIME -->
         <div class="realtime-p">
             <div class="container">
                 <div class="rtime-title">
@@ -211,7 +212,543 @@
                 <p class="info"><i class="fa-solid fa-circle-info"></i>기업정보조회수가 높은 기업 순으로 추천합니다.</p>
             </div>
         </div>
+        <!-- REALTIME -->
+        <!-- CONDITION -->
+        <div class="condition">
+            <div class="container" id="condition">
+                <div class="row">
+                    <div class="c_title">
+                        <h2>어떤 조건의 <br> 중소기업을 찾고 계신가요?</h2>
+                        <p>인재님에 대해 알려주시면 우수 기업을 추천해 드릴게요!</p>
+                    </div>
+                    <div class="c_check">
+                        <ul>
+                            <li>
+                                <p><strong>01</strong> 일하고 싶은 지역은 어디신가요?</p>
+                                <div class="_box" id="c_box">
+                                    <div class="_select">
+                                        <a href="javascript:void(0)" class="_value" id="c_value">
+                                            <span>선택</span>
+                                            <i class="fa-solid fa-angle-down" id="c_angle"></i>
+                                        </a>
+                                    </div>
+                                    <div class="_list_scroll d-none" id="c_list_scroll">
+                                        <div class="_list" id="c_list">
+                                            <ul class="list">
+                                                <li>
+                                                    <a href="javascript:void(0)">
+                                                        <span>전국</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">
+                                                        <span>서울</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">
+                                                        <span>부산</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">
+                                                        <span>대구</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">
+                                                        <span>인천</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">
+                                                        <span>광주</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">
+                                                        <span>대전</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">
+                                                        <span>울산</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">
+                                                        <span>세종</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">
+                                                        <span>경기</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">
+                                                        <span>강원</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">
+                                                        <span>충북</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">
+                                                        <span>충남</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">
+                                                        <span>전북</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">
+                                                        <span>전남</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">
+                                                        <span>경북</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">
+                                                        <span>경남</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">
+                                                        <span>제주</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="c_scroll"> </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <p><strong>02</strong> 어떤 업종을 찾고계신가요?</p>
+                                <div class="_box" id="j_box">
+                                    <div class="_select">
+                                        <a href="javascript:void(0)" class="_value" id="j_value">
+                                            <span class="text_elps">선택</span>
+                                            <i class="fa-solid fa-angle-down" id="j_angle"></i>
+                                        </a>
+                                    </div>
+                                    <div class="_list_scroll d-none" id="j_list_scroll">
+                                        <div class="_list" id="j_list">
+                                            <ul class="list">
+                                                <li>
+                                                    <a href="javascript:void(0)">
+                                                        <span>제조업</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">
+                                                        <span>정보통신업</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">
+                                                        <span>도매 및 소매업</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">
+                                                        <span>전문, 과학 및 기술 서비스업</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">
+                                                        <span>사업시설 관리, 사업 지원 및 임대 서비스업</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">
+                                                        <span>건설업</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">
+                                                        <span>운수 및 창고업</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">
+                                                        <span>수도, 하수 및 폐기물 처리, 원료 재생업</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">
+                                                        <span>협회 및 단체, 수리 및 기타 개인 서비스업</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">
+                                                        <span>교육 서비스업</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">
+                                                        <span>숙박 및 음식점업</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">
+                                                        <span>예술, 스포츠 및 여가관련 서비스업</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">
+                                                        <span>금융 및 보험업</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">
+                                                        <span>보건업 및 사회복지 서비스업</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">
+                                                        <span>농업, 임업 및 어업</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">
+                                                        <span>전기, 가스, 증기 및 공기 조절 공급업</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">
+                                                        <span>광업</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">
+                                                        <span>공공행정, 국방 및 사회보장 행정</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">
+                                                        <span>국제 및 외국기관</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">
+                                                        <span>가구 내 고용활동 및 달리 분류되지 않은 자가소비 생산활동</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="c_scroll"> </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <p><strong>03</strong> 기대하는 복지는 어떤 것인가요?</p>
+                                <div class="_box" id="s_box">
+                                    <div class="_select">
+                                        <a href="javascript:void(0)" class="_value" id="s_value">
+                                            <span>선택</span>
+                                            <i class="fa-solid fa-angle-down" id="s_angle"></i>
+                                        </a>
+                                    </div>
+                                    <div class="_list_scroll d-none" id="s_list_scroll">
+                                        <div class="_list" id="s_list">
+                                            <ul class="list">
+                                                <li>
+                                                    <a href="javascript:void(0)">
+                                                        <span>각종 경조금 지원</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">
+                                                        <span>경조휴가</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">
+                                                        <span>중식제공</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">
+                                                        <span>장기근속자 포상</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">
+                                                        <span>우수사원 표창/포상</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="c_scroll"> </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="last-btn">
+                                <button type="button" id="c_search">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    <span>검색</span> 
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- CONDITION -->
+        <!-- STEP -->
+        <div class="c_step">
+            <div class="container" id="c_step">
+                <h2>중소기업 취업을 위한 첫걸음</h2>
+                <div class="row">
+                    <a href="#none">
+                        <div class="box">
+                            <h4>일자리 가이드</h4>
+                            <p>누군가에게는 일상이 되고, 누군가에게는 소중한 꿈이 되는 곳.<br>
+                                대한민국의 중소기업과 괜찮은 일자리에 대해 알려드립니다.</p>
+                            <span class="detail">자세히 보기</span>
+                            <span class="img img01"></span>
+                        </div>
+                    </a>
+                    <a href="#none">
+                        <div class="box">
+                            <h4>인증사업 소개</h4>
+                            <p>우수 중소기업을 찾고 계신가요? 우수 중소기업을 알아보는 시작 단계라면,<br>
+                                정부 기관으로부터 인증 받은 중소기업을 먼저 알아보는 건 어떨까요?</p>
+                            <span class="detail">자세히 보기</span>
+                            <span class="img img02"></span>
+                        </div>
+                    </a>
+                </div>
+    
+            </div>
+        </div>
+        <!-- /STEP -->
+        <!-- ARTICLE -->
+        <div class="article">
+            <div class="container" id="article">
+                <div class="row">
+                    <div class="left">
+                        <h2>중소기업의 가능성을<br>
+                            여러분은 얼마나 알고있나요?</h2>
+                        <p>유튜브, 네이버블로그, 인스타그램 등 다양한 소셜미디어를 통한<br>
+                            중소기업의 가능성을 느껴보세요.</p>
+                        <a href="#none"><span>중소기업 바로보기 <i class="fa-solid fa-angle-right"></i></span></a>
+                    </div>
+                    <div class="row right">
+                        <div class="r-top">
+                            <h3>공지사항</h3>
+                            <ul>
+                                <li>
+                                    <a href="javascipt:void(0)">
+                                        <p class="text_elps">[경기콘텐츠진흥원] 부천 본원 신규 입주 기업 모집(~4.28 금)</p>
+                                        <span>2023.04.11</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascipt:void(0)">
+                                        <p class="text_elps">[중소기업중앙회] 100년 장수기업 육성을 위한 "가업승계 지원제도" 안내</p>
+                                        <span>2023.03.13</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascipt:void(0)">
+                                        <p class="text_elps">[국방부] 2023년 국군장병 취업박람회 (4.18 ~ 4.19)</p>
+                                        <span>2023.03.07</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascipt:void(0)">
+                                        <p class="text_elps">[참괜찮은중소기업 무료혜택] 2022년 참 괜찮은 중소기업 온라인 AI 채용박람회 신청접수</p>
+                                        <span>2022.11.24</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="javascript:void(0)" class="more"><span>더보기</span></a>
+                        </div>
+                        <a href="javascript:void(0)">
+                            <div class="r-bottom"> </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /ARTICLE -->
+        <!-- BOAST -->
+        <div class="boast">
+            <div class="container" id="boast">
+                <div class="b_textbox">
+                    <h3>어서와, 우리 회사는 처음이지?</h3>
+                    <p>재직중인 기업의 자랑할 만한 사내문화, 복지제도를 소개해보세요.</p>
+                    <a href="javascript:void(0)">
+                        <span>우리회사 자랑하기</span>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- /BOAST -->
+        <!-- SLIDE -->
+        <!-- /SLIDE -->
+        <!-- TOP -->
+        <div class="top">
+            <button type="button" id="top">
+                <i class="fa-solid fa-angle-up"></i>
+                <span>TOP</span>
+            </button>
+        </div>
+        <!-- /TOP -->
     </div>
     <!-- /MAIN CONTENT -->
+    <!-- FOOTER -->
+    <footer>
+        <div class="f_menu">
+            <div class="container" id="f_menu">
+                <div class="row" id="f_row">
+                    <ul class="footer_m">
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">이메일주소무단수집거부</a></li>
+                        <li><a href="#">원격연결</a></li>
+                        <li><a href="#">사이트맵</a></li>
+                        <li><a href="#">인증사업소개</a></li>
+                    </ul>
+                    <div class="family" id="family">
+                        <div class="f_select">
+                            <a href="javascript:void(0)" class="f_value">
+                                <span>관련사이트</span>
+                                <i class="fa-solid fa-angle-up"></i>
+                            </a>
+                        </div>
+                        <div class="f_list_scroll d-none" id="f_list_scroll">
+                            <div class="f_list">
+                                <ul class="fm_list">
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <span>중소벤처24</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <span>중소기업옴부즈만홈페이지</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <span>기업마당</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <span>K-스타트업</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <span>소상공인마당</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <span>중소기업현황 정보시스템</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <span>공공구매종합정보망</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <span>중소기업수출지원센터</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <span>중소기업기술개발종합과제관리시스템</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <span>온라인법인설립시스템</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <span>스마트공장사업관리시스템</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <span>규제자유특구</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <span>중소기업사랑나눔재단</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <span>단체표준인증 종합포털</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <span>KBIZ AMP</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <span>중소기업인력개발원</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <span>가업승계지원센터</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <span>중우회</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="f_scroll"> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="f_info">
+            <div class="container">
+                <div class="row" id="f_info">
+                    <div class="f_logo">
+                        <span></span>
+                    </div>
+                    <div class="f_left">
+                        <ul>
+                            <li><span>주소</span>07242 서울시 영등포구 은행로 30 (여의도동) 중소기업중앙회</li>
+                            <li><span>TEL</span>02-2124-3000<span class="e-mail">E-mail</span>kbiz_job@kbiz.or.kr</li>
+                            <li>Copyright &copy; 2020 KBIZ All rights Reserved.</li>
+                        </ul>
+                    </div>
+                    <div class="f_right">
+                        <span class="f_img01"></span>
+                        <span class="f_img02"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /FOOTER -->
 </body>
 </html>
